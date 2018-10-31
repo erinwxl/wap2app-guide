@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--使用本地选项卡时，将如下两行代码注释取消-->
+		<!--<link rel="stylesheet" type="text/css" href="__wap2apptabbar.css" />
+		<script src="__wap2apptabbar.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+
+	<body>
+		<script type="text/javascript">
+								
+			if(window.plus){
+				plusReady()
+			}else{
+				document.addEventListener('plusready',plusReady,false)
+			}
+			function plusReady(){//这里是每次进入应用都会显示引导页，开发中要如何显示引导页视具体的情况而定。
+				var guide = plus.webview.create('guide.html',"guide");
+				guide.show();
+			}
+		</script>
+	</body>
+
+</html>
